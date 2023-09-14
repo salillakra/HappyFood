@@ -1,10 +1,6 @@
-<nav>hello <strong>I'm nav bar</strong></nav>
+<script>
+ import '../app.css'
+</script>
+
 
 <slot />
-
-
-<style lang="postcss">
-  :global(html) {
-    background-color: theme(colors.yellow.500);
-  }
-</style>
