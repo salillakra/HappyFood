@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "appwrite": "^13.0.0",
     "jodit-svelte": "^1.0.3"
   }
 }

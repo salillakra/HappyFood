@@ -1,4 +1,5 @@
 <script>
+	import '../../Utils/CSS/LoginButton.css'
 	let emailInputInFocus = false;
 	let passwordInputInFocus = false;
 
@@ -33,10 +34,11 @@
 	};
 </script>
 
-<div class=" bg-primary h-screen w-full flex justify-center items-center flex-col md:flex-row">
+<section class=" bg-primary h-screen w-full flex justify-center items-center ">
+	<div class="login-container flex flex-col md:flex-row ">
 	<div class="">
 		<img
-			class="object-cover w-[20rem]"
+			class="object-cover w-80 lg:w-[30rem]"
 			src="/Login_logo.svg"
 			alt="Food logo for login/signup"
 		/>
@@ -44,15 +46,15 @@
 	<form
 		on:submit={sumbithandler}
 		action="#"
-		class=" bg-white space-y-8 min-w-[20rem] flex flex-col items-center p-4"
+		class="  bg-secondary rounded-lg space-y-8 md:w-96 flex flex-col items-center p-4"
 	>
 		<!-- Email input with animation -->
-		<span class="border flex h-14 items-center border-primary m-4 relative p-3 rounded-xl">
+		<span class=" w-full md:w-5/6 mt-12 border flex h-14 items-center border-primary m-4 relative p-3 rounded-xl">
 			<label
 				for="email"
 				class="{emailInputInFocus
-					? 'absolute transition-slow top-[-0.65rem] text-sm text-gray-500'
-					: 'absolute transition-slow top-[0.9rem] text-base'} px-2 bg-white"
+					? 'absolute transition-slow top-[-0.65rem] text-sm text-teal-300'
+					: 'absolute transition-slow top-[0.9rem] text-base'} px-2 bg-secondary"
 			>
 				Enter Your Email
 			</label>
@@ -67,12 +69,12 @@
 		</span>
 
 		<!-- Password input with animation -->
-		<span class="border flex h-14 items-center border-primary m-4 relative p-3 rounded-xl">
+		<span class="border w-full md:w-5/6 flex h-14 items-center border-primary m-4 relative p-3 rounded-xl">
 			<label
 				for="password"
 				class="{passwordInputInFocus
-					? 'absolute transition-slow top-[-0.65rem] text-sm text-gray-500'
-					: 'absolute transition-slow top-[0.9rem] text-base'} px-2 bg-white"
+					? 'absolute transition-slow top-[-0.65rem] text-sm text-teal-300'
+					: 'absolute transition-slow top-[0.9rem] text-base'} px-2 bg-secondary"
 			>
 				Enter Your Password
 			</label>
@@ -85,13 +87,12 @@
 				on:blur={handlePasswordInputBlur}
 			/>
 		</span>
-		<button
-			class="bg-primary text-white py-2 px-4 rounded-full shadow-md transform translate-x-0 transition-transform hover:translate-x-2 hover:bg-gray-600"
-		>
-			Login
-		</button>
+
+		<!--  login button  -->
+  		<button type="submit" class="button">Login</button>
 	</form>
-</div>
+	</div>
+</section>
 
 <style>
 	.transition-slow {
@@ -104,6 +105,7 @@ img {
 }
 
 *{
+	@apply text-white;
 	user-select: none;
 }
 
